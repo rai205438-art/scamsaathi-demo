@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1220">
+<title>ScamSaathi | Digital Safety Navigator</title>
+<style>
+:root{--navy:#0b1220;--panel:#111c2f;--panel2:#16243a;--text:#eef5ff;--muted:#a9b9d0;--cyan:#48d8e8;--green:#65e6ad;--amber:#ffd17a;--red:#ff8c8c;--line:#293a53}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 0%,#16324b 0,transparent 35%),var(--navy);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+.wrap{max-width:980px;margin:auto;padding:22px 16px 56px}.top{display:flex;align-items:center;gap:12px;margin:8px 0 30px}.logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,var(--cyan),#3887ff);display:grid;place-items:center;color:#06111e;font-weight:900;font-size:22px}.brand{font-size:19px;font-weight:800;letter-spacing:.2px}.subbrand{font-size:12px;color:var(--muted)}.pill{margin-left:auto;border:1px solid #326b70;color:var(--green);padding:5px 10px;border-radius:999px;font-size:12px}
+.hero{padding:28px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(135deg,rgba(23,42,66,.96),rgba(13,24,40,.96));box-shadow:0 18px 60px #0002}.eyebrow{color:var(--cyan);font-size:12px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase}h1{font-size:clamp(30px,5vw,48px);line-height:1.08;margin:12px 0}p{margin:8px 0;color:var(--muted)}.hero p{max-width:680px;font-size:17px}.notice{margin-top:18px;padding:12px 14px;border-left:3px solid var(--amber);background:#2b291f;color:#f8e7bd;border-radius:8px;font-size:13px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px}.card{background:rgba(17,28,47,.95);border:1px solid var(--line);border-radius:18px;padding:20px;min-width:0}.card h2{font-size:20px;margin:0 0 6px}.label{display:block;font-size:13px;font-weight:700;color:#d7e6f7;margin:18px 0 7px}select,textarea,input{width:100%;border:1px solid #3a4c66;background:#0b1526;color:var(--text);border-radius:10px;padding:12px;font:inherit}select:focus,textarea:focus{outline:2px solid var(--cyan);outline-offset:2px}textarea{min-height:100px;resize:vertical}button{border:0;border-radius:11px;padding:12px 16px;font:inherit;font-weight:800;cursor:pointer}.primary{background:var(--cyan);color:#06131f;width:100%;margin-top:18px}.secondary{background:#21324a;color:var(--text);border:1px solid #405573}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}.result{display:none;margin-top:18px}.result.show{display:block}.result h2{font-size:23px}.tag{display:inline-block;border-radius:999px;padding:4px 9px;font-size:12px;font-weight:800;margin:6px 0 10px}.tag.red{background:#4a252c;color:#ffb5ba}.tag.amber{background:#4a3920;color:#ffdf9b}.tag.green{background:#153d34;color:#9cf3d0}.steps{padding-left:22px}.steps li{padding:5px 0;color:#dbe7f7}.steps li::marker{color:var(--cyan);font-weight:800}.callout{padding:12px;border:1px solid #4b3d25;background:#292619;border-radius:10px;color:#ffe3a5;margin-top:12px}.small{font-size:12px;color:var(--muted)}.footer{margin-top:24px;text-align:center;color:var(--muted);font-size:12px}.lang{display:flex;gap:8px;align-items:center}.lang select{width:auto;padding:7px}.hidden{display:none!important}
+@media(max-width:720px){.grid{grid-template-columns:1fr}.hero{padding:22px}.pill{display:none}.wrap{padding:14px 12px 40px}}
+@media print{body{background:#fff;color:#111}.wrap{max-width:none}.top,.hero,.card{background:#fff!important;color:#111;border:1px solid #bbb;box-shadow:none}.hero p,p,.small,.footer{color:#333}.grid{display:block}.card{margin-top:12px}.primary,.actions{display:none!important}.result{display:block!important}select,textarea{color:#111;background:#fff}.notice,.callout{background:#fff;color:#111}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="logo">S</div><div><div class="brand">ScamSaathi</div><div class="subbrand">Digital Safety Response Navigator</div></div>
+    <span class="pill">FREE • PRIVACY-FIRST DEMO</span>
+  </header>
+  <section class="hero">
+    <div class="eyebrow">Pause • Protect • Report</div>
+    <h1>Something feels suspicious?<br>Let’s choose a safer next step.</h1>
+    <p>Simple, situation-based guidance for suspicious messages, OTP sharing, money transfers and suspicious app installs. No account connection required.</p>
+    <div class="notice"><strong>Important:</strong> This prototype gives general safety guidance. It cannot confirm whether a message is a scam, contact your bank, or file a police complaint for you. Never enter OTPs, passwords, UPI PINs, full card details or private banking information here.</div>
+  </section>
+  <div class="grid">
+    <section class="card">
+      <h2>1. Tell us what happened</h2>
+      <p>Choose the closest situation. You do not need to paste a real message.</p>
+      <label class="label" for="situation">Situation</label>
+      <select id="situation">
+        <option value="message">I received a suspicious SMS, call or message</option>
+        <option value="clicked">I clicked a suspicious link</option>
+        <option value="otp">I shared an OTP, password or UPI PIN</option>
+        <option value="paid">I sent money or approved a payment</option>
+        <option value="app">I installed an app at someone's request</option>
+        <option value="details">I shared personal or identity details</option>
+      </select>
+      <label class="label" for="language">Guidance language</label>
+      <select id="language"><option value="en">English</option><option value="hi">Hindi (सरल हिंदी)</option><option value="hinglish">Hinglish</option></select>
+      <label class="label" for="notes">Optional notes (do not include secrets)</label>
+      <textarea id="notes" maxlength="500" placeholder="Example: A caller said my bank account would be blocked and asked me to install an app."></textarea>
+      <button class="primary" id="guideBtn">Show my safety steps</button>
+      <p class="small">Your notes are processed only in this page. This demo does not send them to a server or save them.</p>
+    </section>
+    <section class="card">
+      <h2>2. Quick safety rules</h2>
+      <ul class="steps">
+        <li>Never share an OTP, UPI PIN, password or screen-sharing access.</li>
+        <li>You generally do not need to enter a UPI PIN to receive money.</li>
+        <li>Do not call numbers or use links supplied by a suspicious caller; verify through the official app or website.</li>
+        <li>Do not delete messages or transaction records that may help an investigation.</li>
+        <li>If money has been lost, contact your bank/payment provider immediately and report it promptly.</li>
+      </ul>
+      <div class="callout"><strong>If money has been lost in India:</strong> call 1930 as soon as possible and use the official National Cyber Crime Reporting Portal at <a href="https://cybercrime.gov.in/" target="_blank" rel="noopener noreferrer" style="color:#8de9f1">cybercrime.gov.in</a>. Do not delay while using this demo.</div>
+      <p class="small">Official telecom suspected-communication reporting: <a href="https://sancharsaathi.gov.in/" target="_blank" rel="noopener noreferrer" style="color:#8de9f1">Sanchar Saathi</a>. Use official channels and independently verify instructions.</p>
+    </section>
+  </div>
+  <section class="card result" id="result" aria-live="polite">
+    <div class="eyebrow">Your response plan</div><h2 id="resultTitle">Recommended next steps</h2><span id="riskTag" class="tag amber">Caution</span>
+    <p id="resultIntro"></p><ol class="steps" id="resultSteps"></ol>
+    <div class="callout" id="urgentBox"></div>
+    <label class="label" for="record">Incident summary (review before sharing)</label>
+    <textarea id="record" rows="6"></textarea>
+    <div class="actions"><button class="secondary" id="copyBtn">Copy summary</button><button class="secondary" id="downloadBtn">Download text</button><button class="secondary" id="printBtn">Print / Save PDF</button></div>
+    <p class="small">Only include information you are comfortable sharing with your bank or the official reporting authority. Do not publish personal or transaction details publicly.</p>
+  </section>
+  <footer class="footer">ScamSaathi prototype • Educational aid, not an official government service or a substitute for your bank, police or qualified cybercrime responders.</footer>
+</div>
+<script>
+const plans={
+message:{title:"Suspicious communication",tag:"amber",intro:"A suspicious message is not proof of fraud. Avoid interacting until you independently verify it.",steps:["Do not click links, open unexpected attachments, scan payment QR codes or call numbers in the message.","Do not share OTPs, PINs, passwords or remote-access permissions.","Verify the claim through the official app, website or a number you already trust.","Keep the message, sender details and time if you may need to report it.","If it appears to be a fraudulent telecom communication, check the official Sanchar Saathi reporting options."],urgent:"If you have not paid or shared sensitive information, pause and verify first. If money has been lost, use the urgent financial-fraud steps."},
+clicked:{title:"You clicked a suspicious link",tag:"amber",intro:"Risk depends on what happened after the click. Clicking alone does not always mean your device or account is compromised.",steps:["Close the page. Do not download files, grant permissions or enter credentials.","If you entered a password, change it using the official service on a trusted device and enable multi-factor authentication where available.","If you entered banking details or approved a payment, contact your bank/payment provider immediately.","Check for unexpected downloads or permissions. If you installed an app or granted remote access, treat it as a higher-risk situation.","Keep relevant messages and note the approximate time of the event."],urgent:"If money has moved or a financial account may be compromised, contact your bank immediately; call 1930 promptly for suspected financial cyber fraud in India."},
+otp:{title:"Sensitive credential shared",tag:"red",intro:"Treat a shared OTP, password or UPI PIN as urgent. Act through official channels now.",steps:["Contact your bank or affected service immediately using its official app, website or a trusted number.","Ask the provider to secure the account, block affected payment methods or revoke active sessions as appropriate.","Change exposed passwords from a trusted device. Never tell anyone a new OTP or PIN.","If money was lost, call 1930 immediately in India and file a report through the official cybercrime portal.","Preserve messages, alerts and transaction references; do not post them publicly."],urgent:"Do not wait for this website. Contact the relevant bank/service immediately. If financial fraud occurred in India, call 1930 promptly."},
+paid:{title:"Payment or money transfer made",tag:"red",intro:"Time matters. A quick report may help the bank and authorities take action, but recovery is not guaranteed.",steps:["Call your bank/payment provider immediately through its official channel. Ask to report the transaction as suspected fraud and secure your account.","In India, call 1930 as soon as possible and submit details through cybercrime.gov.in.","Keep the transaction ID/UTR, amount, date/time, recipient details and screenshots for the bank and authorities.","Do not pay anyone who promises guaranteed recovery or asks for an advance fee, OTP or PIN.","Follow the bank's official complaint/reference process and keep records of every contact."],urgent:"Urgent: contact your bank now and call 1930 in India. This demo cannot freeze a transaction or guarantee recovery."},
+app:{title:"Suspicious app or remote-access risk",tag:"red",intro:"An app requested by an unknown caller can expose your device or accounts, especially if it has accessibility, screen-sharing or remote-control permissions.",steps:["Stop interacting with the caller and do not enter banking credentials while the app is active.","From a trusted device, contact your bank if banking access or payment details may have been exposed.","Revoke suspicious permissions and uninstall the app if safe to do so; consider expert device support if remote access was enabled.","Change exposed passwords from a trusted device and review account sessions and transactions.","If money was lost, call 1930 promptly in India and report through the official portal."],urgent:"If the app had remote-control/accessibility permissions or you see unauthorized transactions, contact your bank immediately. Do not rely on this checklist alone."},
+details:{title:"Personal or identity details shared",tag:"amber",intro:"The best response depends on which information was shared and whether it was used to access an account.",steps:["Do not share additional details, OTPs or documents with the requester.","If a password, OTP, card detail or UPI PIN was exposed, contact the relevant provider immediately and secure the account.","Watch for password-reset messages, unexpected account activity and follow-up impersonation attempts.","Keep a record of what was shared, when, and with whom; store identity documents securely.","Report suspected misuse through the relevant official service or cybercrime reporting channel."],urgent:"If financial credentials or money were involved, contact your bank immediately and call 1930 promptly in India if financial cyber fraud occurred."}
+};
+const translations={
+hi:{button:"मेरे सुरक्षा कदम दिखाएँ",intro:"स्थिति के अनुसार सुझाए गए अगले कदम।",copy:"सारांश कॉपी करें",download:"टेक्स्ट डाउनलोड करें",print:"प्रिंट / PDF सेव करें",tag:{amber:"सावधानी",red:"तुरंत कार्रवाई"},disclaimer:"यह सामान्य सुरक्षा मार्गदर्शन है। यह धोखाधड़ी की पुष्टि नहीं करता और न ही शिकायत दर्ज करता है।"},
+hinglish:{button:"Mere safety steps dikhao",intro:"Aapki situation ke hisaab se agle safe steps.",copy:"Summary copy karo",download:"Text download karo",print:"Print / PDF save karo",tag:{amber:"Savdhaani",red:"Urgent action"},disclaimer:"Yeh general safety guidance hai. Yeh fraud confirm nahi karta aur complaint file nahi karta."}
+};
+function render(){const key=document.getElementById('situation').value;const p=plans[key];const lang=document.getElementById('language').value;document.getElementById('result').classList.add('show');document.getElementById('resultTitle').textContent=p.title;const tag=document.getElementById('riskTag');tag.className='tag '+p.tag;tag.textContent=(translations[lang]?.tag?.[p.tag])||(p.tag==='red'?'Urgent action':'Caution');document.getElementById('resultIntro').textContent=p.intro;const ol=document.getElementById('resultSteps');ol.innerHTML='';p.steps.forEach(s=>{const li=document.createElement('li');li.textContent=s;ol.appendChild(li)});document.getElementById('urgentBox').textContent=p.urgent;const notes=document.getElementById('notes').value.trim();document.getElementById('record').value='ScamSaathi incident summary\\nSituation: '+p.title+'\\nDate/time recorded: '+new Date().toLocaleString()+'\\nUser notes: '+(notes||'[No notes provided]')+'\\n\\nSuggested actions:\\n- '+p.steps.join('\\n- ')+'\\n\\nUrgent guidance: '+p.urgent+'\\n\\nThis is general guidance, not a confirmation of fraud or an official complaint.';document.getElementById('result').scrollIntoView({behavior:'smooth',block:'start'});if(lang!=='en'){document.getElementById('resultIntro').textContent=translations[lang].intro+' '+p.intro;}}
+document.getElementById('guideBtn').addEventListener('click',render);
+document.getElementById('copyBtn').addEventListener('click',async()=>{const b=document.getElementById('copyBtn');try{await navigator.clipboard.writeText(document.getElementById('record').value);b.textContent='Copied';setTimeout(()=>b.textContent='Copy summary',1600)}catch(e){document.getElementById('record').select();document.execCommand('copy');b.textContent='Select and copy if needed';}});
+document.getElementById('downloadBtn').addEventListener('click',()=>{const blob=new Blob([document.getElementById('record').value],{type:'text/plain;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='scamsaathi-incident-summary.txt';a.click();URL.revokeObjectURL(a.href);});
+document.getElementById('printBtn').addEventListener('click',()=>window.print());
+document.getElementById('language').addEventListener('change',()=>{const lang=document.getElementById('language').value;document.getElementById('guideBtn').textContent=translations[lang]?.button||'Show my safety steps';document.getElementById('copyBtn').textContent=translations[lang]?.copy||'Copy summary';document.getElementById('downloadBtn').textContent=translations[lang]?.download||'Download text';document.getElementById('printBtn').textContent=translations[lang]?.print||'Print / Save PDF';});
+</script>
+</body>
+</html>
